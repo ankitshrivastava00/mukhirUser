@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "372999219148",
+    "firebase_url": "https://chiggys.firebaseio.com",
+    "project_id": "chiggys",
+    "storage_bucket": "chiggys.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372999219148:android:d07ac3b71c330348",
+        "android_client_info": {
+          "package_name": "com.shops.chiggys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372999219148-rqostaa73b8nhelh6oplenfvcbnl5tqv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9A2ircwfnxX-9olEh2WWvGpgz6E_U__s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372999219148-rqostaa73b8nhelh6oplenfvcbnl5tqv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

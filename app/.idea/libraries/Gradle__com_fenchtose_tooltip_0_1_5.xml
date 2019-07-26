@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.fenchtose:tooltip-0.1.5">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tooltip-0.1.5.aar/00704913ed4870ff82d2f561543ed350/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tooltip-0.1.5.aar/00704913ed4870ff82d2f561543ed350/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tooltip-0.1.5.aar/00704913ed4870ff82d2f561543ed350/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fenchtose/tooltip/0.1.5/930bc9b83fa6c7b7e09bcf005bf511bebbccba03/tooltip-0.1.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

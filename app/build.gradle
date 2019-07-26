@@ -1,0 +1,123 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    google()
+}
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+
+        applicationId "com.shops.chiggys"
+        minSdkVersion 19
+        targetSdkVersion 29
+        vectorDrawables.useSupportLibrary = true
+        versionCode 5
+        versionName "1.2"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    configurations {
+        all {
+            exclude module: 'httpclient'
+            exclude module: 'commons-logging'
+        }
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //Sticky header
+    //Textview number count animation
+    //Card view
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true
+    }
+//    //Braintree
+//    compile 'com.braintreepayments.api:drop-in:3.+'
+    compile 'com.stripe:stripe-android:2.0.2'
+    compile 'com.braintreepayments:card-form:3.0.3'
+    compile 'com.razorpay:checkout:1.5.5'
+
+//    compile 'com.loopj.android:android-async-http:1.4.9'
+//    compile 'com.lukekorth:mailable_log:0.1.6'
+//    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    //noinspection GradleCompatible
+    compile 'com.google.android.gms:play-services-wallet:11.4.2'
+    //noinspection GradleCompatible
+    compile 'com.google.firebase:firebase-messaging:11.4.2'
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:palette-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.afollestad:sectioned-recyclerview:0.2.3'
+    compile 'com.google.android.gms:play-services-auth:11.4.2'
+    compile 'com.google.android.gms:play-services-maps:11.4.2'
+    compile 'com.google.android.gms:play-services-places:11.4.2'
+    compile 'com.google.android.gms:play-services-location:11.4.2'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.pubnub:pubnub-gson:4.10.0'
+    compile 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+    compile 'com.fenchtose:tooltip:0.1.5'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    //Facebook
+    compile 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
+    compile 'com.github.amarjain07:StickyScrollView:1.0.2'
+    compile 'me.philio:pinentryview:1.0.6'
+    compile 'com.robinhood.ticker:ticker:1.2.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.sackcentury:shinebutton:0.1.9'
+    compile 'com.roughike:bottom-bar:2.3.1'
+    compile 'com.aurelhubert:ahbottomnavigation:2.1.0'
+    compile 'com.ethanhua:skeleton:1.0.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.4'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
+apply plugin: 'com.google.gms.google-services'
