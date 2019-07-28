@@ -142,7 +142,7 @@
                         android:maxLines="1"
                         android:paddingStart="0dp"
                         android:paddingEnd="0dp"
-                        android:text="$200 for two"
+                        android:text="₹200 for two"
                         android:textAllCaps="true"
                         android:textColor="@color/colorSecondaryText"
                         android:textSize="@dimen/text_small"

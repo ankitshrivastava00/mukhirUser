@@ -46,7 +46,7 @@
             android:layout_below="@+id/dish_name_text"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@+id/food_type_image"
-            android:text="$100"
+            android:text="₹100"
             android:textColor="@color/colorTextBlack"
             android:textSize="@dimen/text_small" />
 
