@@ -71,7 +71,7 @@ public class GlobalData {
 
     public static int otpValue = 0;
     public static String mobile = "";
-    public static String currencySymbol = "$";
+    public static String currencySymbol = "₹";
     public static int notificationCount = 0;
 
 //Search Fragment
