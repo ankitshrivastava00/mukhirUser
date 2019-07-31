@@ -82,12 +82,12 @@ public class MobileNumberActivity extends AppCompatActivity implements GoogleApi
     EditText etMobileNumber;
     @BindView(R.id.next_btn)
     Button nextBtn;
-    @BindView(R.id.connect_with)
-    TextView connectWith;
-    @BindView(R.id.facebook_login)
-    ImageButton facebookLogin;
-    @BindView(R.id.google_login)
-    ImageButton googleLogin;
+//    @BindView(R.id.connect_with)
+//    TextView connectWith;
+//    @BindView(R.id.facebook_login)
+//    ImageButton facebookLogin;
+//    @BindView(R.id.google_login)
+//    ImageButton googleLogin;
     ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
     @BindView(R.id.countryImage)
     ImageView mCountryFlagImageView;
@@ -108,7 +108,7 @@ public class MobileNumberActivity extends AppCompatActivity implements GoogleApi
     CallbackManager callbackManager;
     AccessTokenTracker accessTokenTracker;
 
-    Button fb_login;
+   // Button fb_login;
     JSONObject json;
     String fb_first_name = "", fb_id = "", profile_img = "", fb_email = "", fb_last_name = "";
     ConnectionHelper helper;
@@ -477,7 +477,7 @@ public class MobileNumberActivity extends AppCompatActivity implements GoogleApi
     }
 
 
-    @OnClick({R.id.back_img, R.id.next_btn, R.id.already_have_aacount_txt, R.id.facebook_login, R.id.google_login})
+    @OnClick({R.id.back_img, R.id.next_btn, R.id.already_have_aacount_txt})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.back_img:
@@ -488,15 +488,11 @@ public class MobileNumberActivity extends AppCompatActivity implements GoogleApi
                 overridePendingTransition(R.anim.slide_in_right, R.anim.anim_nothing);
                 finish();
                 break;
-            case R.id.facebook_login:
-                fbLogin();
-//                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
-                break;
-            case R.id.google_login:
-//                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
-                Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-                startActivityForResult(signInIntent, RC_SIGN_IN);
-                break;
+//            case R.id.google_login:
+////                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
+//                Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+//                startActivityForResult(signInIntent, RC_SIGN_IN);
+//                break;
 
             case R.id.next_btn:
                 String mobileNumber = country_code + etMobileNumber.getText().toString();

@@ -98,12 +98,12 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     Button loginBtn;
     @BindView(R.id.donnot_have_account)
     TextView donnotHaveAccount;
-    @BindView(R.id.connect_with)
-    TextView connectWith;
-    @BindView(R.id.facebook_login)
-    ImageButton facebookLogin;
-    @BindView(R.id.google_login)
-    ImageButton googleLogin;
+//    @BindView(R.id.connect_with)
+//    TextView connectWith;
+//    @BindView(R.id.facebook_login)
+//    ImageButton facebookLogin;
+//    @BindView(R.id.google_login)
+//    ImageButton googleLogin;
     String mobile, password;
     String GRANT_TYPE = "password";
     ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
@@ -268,7 +268,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         });
     }
 
-    @OnClick({R.id.login_btn, R.id.forgot_password, R.id.donnot_have_account, R.id.back_img, R.id.eye_img, R.id.facebook_login, R.id.google_login})
+    @OnClick({R.id.login_btn, R.id.forgot_password, R.id.donnot_have_account, R.id.back_img, R.id.eye_img})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.login_btn:
@@ -283,15 +283,15 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             case R.id.back_img:
                 onBackPressed();
                 break;
-            case R.id.facebook_login:
-//                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
-                fbLogin();
-                break;
-            case R.id.google_login:
-//                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
-                Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
-                startActivityForResult(signInIntent, RC_SIGN_IN);
-                break;
+//            case R.id.facebook_login:
+////                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
+//                fbLogin();
+//                break;
+//            case R.id.google_login:
+////                Snackbar.make(this.findViewById(android.R.id.content), getResources().getString(R.string.coming_soon), Snackbar.LENGTH_SHORT).show();
+//                Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+//                startActivityForResult(signInIntent, RC_SIGN_IN);
+//                break;
             case R.id.eye_img:
                 if (eyeImg.getTag().equals(1)) {
                     edPassword.setTransformationMethod(null);

@@ -93,16 +93,16 @@
     <string name="order_placed">Order Placed</string>
     <string name="order_confirmed">Order Confirmed</string>
     <string name="order_processed">Order Processed</string>
-    <string name="order_pickedup">Order Pickedup</string>
+    <string name="order_pickedup">Order Picked Up</string>
     <string name="order_delivered">Order Delivered</string>
     <string name="order_cancelled">Order Cancelled</string>
 
     <!--Order Flow Description-->
     <string name="description_1">We have received your order.</string>
     <string name="description_2">Your order has been confirmed.</string>
-    <string name="description_3">Your food is getting cooked.</string>
-    <string name="description_4">Your food is on its way.</string>
-    <string name="description_5">Enjoy your meal.</string>
+    <string name="description_3">Your order is being prepared.</string>
+    <string name="description_4">Your order is on its way.</string>
+    <string name="description_5">Enjoy your meat.</string>
 
     <!--Past Order Page-->
     <string name="order_delivered_successfully">Order Delivered Successfully</string>
