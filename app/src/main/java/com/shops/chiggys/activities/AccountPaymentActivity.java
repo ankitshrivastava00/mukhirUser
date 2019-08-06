@@ -431,10 +431,10 @@ public class AccountPaymentActivity extends AppCompatActivity  {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.wallet_layout:
-                startActivity(new Intent(this, WalletActivity.class));
-                overridePendingTransition(R.anim.slide_in_right, R.anim.anim_nothing);
-                finish();
-                break;
+//                startActivity(new Intent(this, WalletActivity.class));
+//                overridePendingTransition(R.anim.slide_in_right, R.anim.anim_nothing);
+//                finish();
+//                break;
 //            case R.id.add_new_cart:
 ////              launchDropIn(view);
 //                startActivity(new Intent(AccountPaymentActivity.this, AddCardActivity.class));

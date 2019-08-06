@@ -380,7 +380,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemSelected
                     restaurantList.addAll(GlobalData.shopList);
                     bannerList.clear();
                     bannerList.addAll(response.body().getBanners());
-                    restaurantCountTxt.setText("" + restaurantList.size() + " Restaurants");
+                    restaurantCountTxt.setText("" + restaurantList.size() + "Shops");
                     adapterRestaurant.notifyDataSetChanged();
                     bannerAdapter.notifyDataSetChanged();
 
@@ -489,7 +489,6 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemSelected
                         addressTxt.setText(GlobalData.address);
                         addressLabel.setText(selectedAddress.getType());
                         addressTxt.setText(selectedAddress.getMapAddress());
-
 
                         latitude = selectedAddress.getLatitude();
                         longitude = selectedAddress.getLongitude();
