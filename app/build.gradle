@@ -20,12 +20,12 @@ android {
     compileSdkVersion 29
     defaultConfig {
 
-        applicationId "com.shops.chiggys"
+        applicationId "com.shops.Mukhir"
         minSdkVersion 19
         targetSdkVersion 29
         vectorDrawables.useSupportLibrary = true
-        versionCode 11
-        versionName "1.8"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -117,6 +117,8 @@ dependencies {
     compile 'com.ethanhua:skeleton:1.0.0'
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.intuit.sdp:sdp-android:1.0.4'
+    compile 'com.android.volley:volley:1.1.0'
+
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

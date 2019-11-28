@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context="com.shops.chiggys.activities.WelcomeScreenActivity">
+    tools:context="com.shops.Mukhir.activities.WelcomeScreenActivity">
 
-    <RelativeLayout
+    <FrameLayout
         android:background="@color/background_color"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,9 +20,33 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <Button
+            android:id="@+id/sign_in_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="40dp"
+           android:layout_gravity="center"
+            android:background="@color/theme"
+            android:text="@string/sign_in"
+            android:textColor="@color/colorTextWhite" />
+
+        <Button
+            android:id="@+id/sign_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shadow_view"
+            android:text="@string/signup" />
+
         <!-- Dots Layout-->
 
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/layoutDots"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -41,10 +65,10 @@
             android:layout_marginTop="26dp"
             android:gravity="end"
             android:text="@string/skip"
-            android:textColor="@color/theme"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp" />
 
-    </RelativeLayout>
+    </FrameLayout>
 
     <LinearLayout
         android:background="@color/background_color"
@@ -53,31 +77,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/sign_in_btn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="1dp"
-            android:layout_weight="1"
-            android:background="@color/theme"
-            android:text="@string/sign_in"
-            android:textColor="@color/colorTextWhite" />
 
-        <Button
-            android:id="@+id/sign_up_btn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadow_view"
-            android:text="@string/signup" />
+
+
 
     </LinearLayout>
 

@@ -1,54 +1,37 @@
 
-package com.shops.Mukhir.models;
+package com.shops.Mukhir.clientapimodel;
 
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.shops.Mukhir.models.Shop;
 
-public class Banner {
+public class postorder {
 
-    @SerializedName("url")
+    @SerializedName("isSuccessful")
     @Expose
-    private String url;
-    @SerializedName("position")
+    private String isSuccessful;
+    @SerializedName("message")
     @Expose
-    private Integer position;
-    @SerializedName("status")
+    private Integer message;
+
+    @SerializedName("data")
     @Expose
-    private String status;
-    @SerializedName("shop")
-    @Expose
-    private Shop shop;
+    public JsonObject data;
 
-    public String getUrl() {
-        return url;
+    public String getIsSuccessful() {
+        return isSuccessful;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setIsSuccessful(String isSuccessful) {
+        this.isSuccessful = isSuccessful;
     }
 
-    public Integer getPosition() {
-        return position;
+    public Integer getMessage() {
+        return message;
     }
 
-    public void setPosition(Integer position) {
-        this.position = position;
+    public void setMessage(Integer message) {
+        this.message = message;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Shop getShop() {
-        return shop;
-    }
-
-    public void setShop(Shop shop) {
-        this.shop = shop;
-    }
-
 }

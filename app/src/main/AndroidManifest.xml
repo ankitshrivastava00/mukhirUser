@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shops.chiggys">
+    package="com.shops.Mukhir">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,7 +18,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:name="com.shops.chiggys.MyApplication"
+        android:name="com.shops.Mukhir.MyApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -40,11 +40,11 @@
             android:value="true" />
 
         <activity
-            android:name="com.shops.chiggys.activities.WelcomeScreenActivity"
+            android:name="com.shops.Mukhir.activities.WelcomeScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.SplashActivity"
+            android:name="com.shops.Mukhir.activities.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -54,12 +54,12 @@
             </intent-filter>
         </activity>
         <!-- Firebase Notifications -->
-        <service android:name="com.shops.chiggys.fcm.MyFirebaseMessagingService">
+        <service android:name="com.shops.Mukhir.fcm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.shops.chiggys.fcm.MyFirebaseInstanceIDService">
+        <service android:name="com.shops.Mukhir.fcm.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -78,124 +78,124 @@
             <!--</intent-filter>-->
         <!--</activity>-->
         <activity
-            android:name="com.shops.chiggys.HomeActivity"
+            android:name="com.shops.Mukhir.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustNothing" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="@string/p_apikey" />
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_live_uq9UQS3cLcjBxx"
+            android:value="rzp_test_9kocemOgKVIoqk"
             />
         <!-- <service -->
         <!-- android:name=".service.OrderStatusService" -->
         <!-- android:exported="false" /> -->
 
         <activity
-            android:name="com.shops.chiggys.activities.LoginActivity"
+            android:name="com.shops.Mukhir.activities.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.AddCardActivity"
+            android:name="com.shops.Mukhir.activities.AddCardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.OtpActivity"
+            android:name="com.shops.Mukhir.activities.OtpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.MobileNumberActivity"
+            android:name="com.shops.Mukhir.activities.MobileNumberActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.SignUpActivity"
+            android:name="com.shops.Mukhir.activities.SignUpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.ForgotPasswordActivity"
+            android:name="com.shops.Mukhir.activities.ForgotPasswordActivity"
             android:label="@string/forgot_password"
-            android:parentActivityName="com.shops.chiggys.activities.LoginActivity"
+            android:parentActivityName="com.shops.Mukhir.activities.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.HotelViewActivity"
+            android:name="com.shops.Mukhir.activities.HotelViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.ChangePasswordActivity"
+            android:name="com.shops.Mukhir.activities.ChangePasswordActivity"
             android:label="Change Password"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.FavouritesActivity"
+            android:name="com.shops.Mukhir.activities.FavouritesActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.RecommendedListActivity"
+            android:name="com.shops.Mukhir.activities.RecommendedListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.EditAccountActivity"
+            android:name="com.shops.Mukhir.activities.EditAccountActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.SetDeliveryLocationActivity"
+            android:name="com.shops.Mukhir.activities.SetDeliveryLocationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.SaveDeliveryLocationActivity"
+            android:name="com.shops.Mukhir.activities.SaveDeliveryLocationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.ManageAddressActivity"
+            android:name="com.shops.Mukhir.activities.ManageAddressActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.AccountPaymentActivity"
+            android:name="com.shops.Mukhir.activities.AccountPaymentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.OrdersActivity"
+            android:name="com.shops.Mukhir.activities.OrdersActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.FilterActivity"
+            android:name="com.shops.Mukhir.activities.FilterActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.ViewCartActivity"
+            android:name="com.shops.Mukhir.activities.ViewCartActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.PastOrderDetailActivity"
+            android:name="com.shops.Mukhir.activities.PastOrderDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.OtherHelpActivity"
+            android:name="com.shops.Mukhir.activities.OtherHelpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.shops.chiggys.activities.NotificationActivity"
+            android:name="com.shops.Mukhir.activities.NotificationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.PromotionActivity"
+            android:name="com.shops.Mukhir.activities.PromotionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.CurrentOrderDetailActivity"
+            android:name="com.shops.Mukhir.activities.CurrentOrderDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.AddMoneyActivity"
+            android:name="com.shops.Mukhir.activities.AddMoneyActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustNothing"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.shops.chiggys.activities.WalletActivity"
+            android:name="com.shops.Mukhir.activities.WalletActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -204,15 +204,15 @@
             android:value="3aef7a5b05836cf8166f23c95e43c52517bee917" />
 
         <activity
-            android:name="com.shops.chiggys.activities.ResetPasswordActivity"
+            android:name="com.shops.Mukhir.activities.ResetPasswordActivity"
             android:screenOrientation="portrait" />
 
 
         <activity
-            android:name="com.shops.chiggys.activities.PaymentActivity"
+            android:name="com.shops.Mukhir.activities.PaymentActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.shops.chiggys.activities.SecretKeyActivity"
+            android:name="com.shops.Mukhir.activities.SecretKeyActivity"
             android:screenOrientation="portrait" />
 
         <!--<provider-->
@@ -226,10 +226,10 @@
         <!--</provider>-->
 
         <activity
-            android:name="com.shops.chiggys.activities.ProductDetailActivity"
+            android:name="com.shops.Mukhir.activities.ProductDetailActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan"
-            android:parentActivityName="com.shops.chiggys.activities.HotelViewActivity"/>
+            android:parentActivityName="com.shops.Mukhir.activities.HotelViewActivity"/>
     </application>
 
 </manifest>

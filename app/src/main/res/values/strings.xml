@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">"Chiggys"</string>
+    <string name="app_name" translatable="false">"Mukhir"</string>
 
     <string name="facebook_app_id">460291291201609</string>
     <string name="login">Login</string>
@@ -55,14 +55,14 @@
 
     <string name="getting_address">"Getting Address"</string>
     <string name="fresh">F r e s h</string>
-    <string name="fresh_description">Discover new near shops nearby and hold your favourite shop</string>
+    <string name="fresh_description">Discover chef\'s best cuisine Indian, Chinese, American, Jamaican etc.</string>
     <string name="signin">Sign in</string>
     <string name="sign_in">Sign in</string>
     <string name="signup">Sign up</string>
     <string name="search">S e a r c h</string>
-    <string name="search_description">View meat categories and reviews of shops around you</string>
+    <string name="search_description">Choose your favorite dish at the best prices.</string>
     <string name="bookmark">B o o k m a r k</string>
-    <string name="bookmark_description">Add shops from where you want order again</string>
+    <string name="bookmark_description">Get your favorite food delivered at your doorstep in minutes</string>
     <string name="already_you_have_account">Already you have an account?</string>
     <string name="signin_here">SIGN IN here</string>
 
@@ -151,7 +151,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="replace_cart_item">Replace cart item?</string>
-    <string name="do_you_want_to_discart_the_selection_and_add_dishes_from_the_restaurant">Do you want to discard the selected itemses and add itemses from this shops</string>
+    <string name="do_you_want_to_discart_the_selection_and_add_dishes_from_the_restaurant">Do you want to discard the selected itemses and add itemses from this Restaurants</string>
     <string name="enter_card_details">Card details not valid</string>
     <string name="add_card">Add card</string>
     <string name="okay">Okay</string>
@@ -185,7 +185,7 @@
     <string name="reorder_confirm_message">Your cart contains itemes from %1₹s. Do you want to discard the selection and add itemes from %2₹s ?</string>
     <string name="no_result">No Results</string>
     <string name="what_is_love">what is love</string>
-    <string name="fav_description">Once you favorite a shop, it will appear here.</string>
+    <string name="fav_description">Once you favorite a Restaurant, it will appear here.</string>
     <string name="close">Close</string>
     <string name="no_addons">No Addons</string>
     <string name="add_new_address">Add New Address</string>
@@ -211,10 +211,11 @@
     <string name="reorder">Reorder</string>`
     <string name="please_login">Please login</string>
 
-    <string name="no_restaurant_found">No shops!</string>
+    <string name="no_restaurant_found">No Restaurants!</string>
     <string name="no_restaurant_found_in_your_location">See if any other filter works.</string>
     <string name="by_online" translatable="false">Online</string>
-
+    <string name="api_key">AIzaSyBmTWJoAzY9zqT_G75HL04Nl5y-9Lt00cs</string>
+    <string name="p_apikey">AIzaSyBmTWJoAzY9zqT_G75HL04Nl5y-9Lt00cs</string>
 
     <plurals name="item">
         <item quantity="one">%d Item</item>

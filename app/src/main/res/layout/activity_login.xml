@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context="com.shops.chiggys.activities.LoginActivity">
+    tools:context="com.shops.Mukhir.activities.LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:contentDescription="@string/login"
-            android:src="@drawable/app_icon" />
+            android:src="@drawable/logo" />
 
         <LinearLayout
             android:layout_width="match_parent"

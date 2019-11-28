@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbars="none"
-        tools:context="com.shops.chiggys.activities.ProfileActivity">
+        tools:context="com.shops.Mukhir.activities.ProfileActivity">
 
         <LinearLayout
 

@@ -54,7 +54,7 @@
 
     <string name="getting_address">"Getting Address"</string>
     <string name="fresh">F r e s h</string>
-    <string name="fresh_description">Discover new near shops nearby and hold your favourite shop</string>
+    <string name="fresh_description">Discover new near shops nearby and hold your favourite restaurant</string>
     <string name="signin">Sign in</string>
     <string name="sign_in">Sign in</string>
     <string name="signup">Sign up</string>
@@ -64,6 +64,7 @@
     <string name="bookmark_description">Add shops from where you want order again</string>
     <string name="already_you_have_account">Already you have an account?</string>
     <string name="signin_here">SIGN IN here</string>
+    <string name="p_apikey">AIzaSyAbBChNvBbCrxxpdCPcHGzh_0HzQnmF1Bc</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="next">Next</string>
@@ -184,7 +185,7 @@
     <string name="reorder_confirm_message">Your cart contains itemes from %1₹s. Do you want to discard the selection and add itemes from %2$s ?</string>
     <string name="no_result">No Results</string>
     <string name="what_is_love">what is love</string>
-    <string name="fav_description">Once you favorite a Shop, it will appear here.</string>
+    <string name="fav_description">Once you favorite a Restaurant, it will appear here.</string>
     <string name="close">Close</string>
     <string name="no_addons">No Addons</string>
     <string name="add_new_address">Add New Address</string>
@@ -212,6 +213,7 @@
 
     <string name="no_restaurant_found">No Shops!</string>
     <string name="no_restaurant_found_in_your_location">See if any other filter works.</string>
+    <string name="api_key">AIzaSyDhJuMjy-9d8Ja561myStovSTRUzTROBx4</string>
 
 
     <plurals name="item" tools:ignore="MissingQuantity">

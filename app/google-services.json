@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "431166168326",
+    "firebase_url": "https://mukhir-d195e.firebaseio.com",
+    "project_id": "mukhir-d195e",
+    "storage_bucket": "mukhir-d195e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431166168326:android:7e856040dc485dcb65d287",
+        "android_client_info": {
+          "package_name": "com.shops.Mukhir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431166168326-bvmqcpir8prquidgj6vrcl6ehe8s95q6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUd_Y7oglubgiYSp_EcSNFl2gZutguNwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431166168326-bvmqcpir8prquidgj6vrcl6ehe8s95q6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

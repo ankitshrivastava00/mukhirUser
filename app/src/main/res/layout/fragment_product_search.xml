@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eee"
-    tools:context="com.shops.chiggys.fragments.ProductSearchFragment">
+    tools:context="com.shops.Mukhir.fragments.ProductSearchFragment">
 
     <android.support.v7.widget.RecyclerView
         android:layout_marginBottom="@dimen/_45sdp"

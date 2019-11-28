@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context="com.shops.chiggys.activities.CurrentOrderDetailActivity">
+    tools:context="com.shops.Mukhir.activities.CurrentOrderDetailActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
