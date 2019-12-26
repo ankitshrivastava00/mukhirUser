@@ -221,9 +221,11 @@ public class AccountPaymentActivity extends AppCompatActivity  {
 
 
                 } else if (cashCheckBox.isChecked()) {
-
-                    CartFragment.checkoutMap1.put("payment_type", "COD");
-                    checkOutClient(CartFragment.checkoutMap1);
+                    CartFragment.checkoutMap.put("payment_mode", "cash");
+                 //   CartFragment.checkoutMap.put("order_no", reference_no);
+                  //  CartFragment.checkoutMap1.put("payment_type", "COD");
+                  //  checkOutClient(CartFragment.checkoutMap1);
+                    checkOut(CartFragment.checkoutMap);
                 } else {
                     Toast.makeText(context, "Please select payment mode", Toast.LENGTH_SHORT).show();
                 }
@@ -239,64 +241,8 @@ public class AccountPaymentActivity extends AppCompatActivity  {
 //        }
     }
 
-    private void checkOutClient(final HashMap<String, String> map) {
-        try {
 
-                StringRequest stringRequest = new StringRequest(Request.Method.POST, BuildConfigure.CLIENT_BASE_URL+"api/postorders",
-                        new com.android.volley.Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-
-                                Log.d("Resfdsf ",response +"");
-                                try {
-                                    JSONObject object = new JSONObject(response.trim());
-                                    String isSuccessful =object.getString("isSuccessful").trim();;
-
-                                    if (isSuccessful.equalsIgnoreCase("true")) {
-                                        String message =object.getString("message").trim();;
-                                        String role =object.getJSONObject("data").getString("role").trim();
-                                        String id =object.getJSONObject("data").getString("id").trim();
-                                        String reference_no =object.getJSONObject("data").getString("reference_no").trim();
-
-                                        CartFragment.checkoutMap.put("payment_mode", "cash");
-                                        CartFragment.checkoutMap.put("order_no", reference_no);
-
-                                        checkOut(CartFragment.checkoutMap,reference_no);
-                                    } else {
-                            Toast.makeText(AccountPaymentActivity.this,"Payment Failed",Toast.LENGTH_SHORT).show();
-
-                                    }
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-                        },
-                        new com.android.volley.Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Log.d("Resfdsferror ",error +"");
-
-                            }
-                        }) {
-                    @Override
-                    protected Map<String, String> getParams() {
-                             return map;
-                    }
-                };
-
-                stringRequest.setRetryPolicy(new DefaultRetryPolicy(60000,
-                        DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                        DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-                RequestQueue requestQueue = Volley.newRequestQueue(AccountPaymentActivity.this);
-                requestQueue.add(stringRequest);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-    }
-
-    private void checkOut(HashMap<String, String> map,final String refrenceNo) {
+    private void checkOut(HashMap<String, String> map) {
         customDialog.show();
         Call<Order> call = apiInterface.postCheckout(map);
         call.enqueue(new Callback<Order>() {
@@ -310,7 +256,7 @@ public class AccountPaymentActivity extends AppCompatActivity  {
                     GlobalData.profileModel.setWalletBalance(response.body().getUser().getWalletBalance());
                     GlobalData.isSelectedOrder = new Order();
                     GlobalData.isSelectedOrder = response.body();
-                    startActivity(new Intent(context, CurrentOrderDetailActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).putExtra("order_no",refrenceNo));
+                    startActivity(new Intent(context, CurrentOrderDetailActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     finish();
                 } else {
                     try {

@@ -1,5 +1,6 @@
 package com.shops.Mukhir.adapter;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -124,6 +125,7 @@ public class OrdersAdapter extends SectionedRecyclerViewAdapter<OrdersAdapter.Vi
                 final HashMap<String, String> map = new HashMap<>();
                 map.put("order_id", String.valueOf(object.getId()));
                 if (GlobalData.addCart != null && !GlobalData.addCart.getProductList().isEmpty()) {
+                    @SuppressLint({"StringFormatInvalid", "LocalSuppress"})
                     String message = String.format(activity.getResources().getString(R.string.reorder_confirm_message), GlobalData.addCart.getProductList().get(0).getProduct().getShop().getName(), object.getShop().getName());
                     new AlertDialog.Builder(activity)
                             .setTitle("Reorder")
@@ -197,8 +199,6 @@ public class OrdersAdapter extends SectionedRecyclerViewAdapter<OrdersAdapter.Vi
                 activity.overridePendingTransition(R.anim.slide_in_right, R.anim.anim_nothing);
             }
         });
-
-
     }
 
     private void Reorder(HashMap<String, String> map) {
@@ -248,10 +248,7 @@ public class OrdersAdapter extends SectionedRecyclerViewAdapter<OrdersAdapter.Vi
                 dateTimeTxt = (TextView) itemView.findViewById(R.id.date_time);
                 dividerLine = (View) itemView.findViewById(R.id.divider_line);
             }
-
-
         }
-
     }
 
     private String getTimeFromString(String time) {
@@ -268,9 +265,7 @@ public class OrdersAdapter extends SectionedRecyclerViewAdapter<OrdersAdapter.Vi
 
         } catch (ParseException e) {
             e.printStackTrace();
-
         }
         return value;
     }
-
 }

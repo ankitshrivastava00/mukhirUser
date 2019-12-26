@@ -118,83 +118,23 @@ public class PaymentActivity extends Activity implements PaymentResultListener {
 
         try {
          //   Toast.makeText(this, "Payment Successful: " + razorpayPaymentID, Toast.LENGTH_SHORT).show();
+            CartFragment.checkoutMap.put("payment_mode", "razorpay");
 
-            CartFragment.checkoutMap1.put("payment_type", "PPD");
+            checkOut(CartFragment.checkoutMap);
 
-            checkOutClient(CartFragment.checkoutMap1);
             Log.d("Payment Record",CartFragment.checkoutMap.toString());
             return;
 
         } catch (Exception e) {
+            CartFragment.checkoutMap.put("payment_mode", "razorpay");
 
-
-            CartFragment.checkoutMap1.put("payment_type", "PPD");
-
-            checkOutClient(CartFragment.checkoutMap1);
-        }
-    }
-
-    private void checkOutClient(final HashMap<String, String> map) {
-        try {
-
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, BuildConfigure.CLIENT_BASE_URL+"api/postorders",
-                    new com.android.volley.Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-
-                            Log.d("Resfdsf ",response +"");
-                            try {
-                                JSONObject object = new JSONObject(response.trim());
-                                String isSuccessful =object.getString("isSuccessful").trim();;
-
-                                if (isSuccessful.equalsIgnoreCase("true")) {
-                                    // Log.e(TAG, "Exception in onPaymentSuccess", e);
-                                    String message =object.getString("message").trim();;
-                                    String role =object.getJSONObject("data").getString("role").trim();
-                                    String id =object.getJSONObject("data").getString("id").trim();
-                                    String reference_no =object.getJSONObject("data").getString("reference_no").trim();
-
-                                    CartFragment.checkoutMap.put("payment_mode", "razorpay");
-                                    CartFragment.checkoutMap.put("order_no", reference_no);
-                                    checkOut(CartFragment.checkoutMap,reference_no);
-
-                                } else {
-                                 //   Toast.makeText(PaymentActivity.this,"Payment Failed",Toast.LENGTH_SHORT).show();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    },
-                    new com.android.volley.Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Log.d("Resfdsferror ",error +"");
-                        }
-                    }) {
-                @Override
-                protected Map<String, String> getParams() {
-                       /* Map<String, String> params = new HashMap<String, String>();
-                        params.put("name", strEmail);
-                        params.put("num", strEmail);
-                        params.put("did", sd.getUserFcmId());*/
-                    return map;
-                }
-            };
-
-            stringRequest.setRetryPolicy(new DefaultRetryPolicy(60000,
-                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
-                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
-            RequestQueue requestQueue = Volley.newRequestQueue(PaymentActivity.this);
-            requestQueue.add(stringRequest);
-
-        } catch (Exception e) {
-            e.printStackTrace();
+            checkOut(CartFragment.checkoutMap);
 
         }
     }
 
-    private void checkOut(HashMap<String, String> map,final String refrenceNo) {
+
+    private void checkOut(HashMap<String, String> map) {
 
         Call<Order> call = apiInterface.postCheckout(map);
         call.enqueue(new Callback<Order>() {
@@ -208,7 +148,7 @@ public class PaymentActivity extends Activity implements PaymentResultListener {
                     GlobalData.profileModel.setWalletBalance(response.body().getUser().getWalletBalance());
                     GlobalData.isSelectedOrder = new Order();
                     GlobalData.isSelectedOrder = response.body();
-                    startActivity(new Intent(context, CurrentOrderDetailActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).putExtra("order_no",refrenceNo));
+                    startActivity(new Intent(context, CurrentOrderDetailActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
                     finish();
                 } else {
                     try {

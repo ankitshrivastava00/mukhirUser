@@ -154,7 +154,7 @@ public class CartFragment extends Fragment {
     ConnectionHelper connectionHelper;
     Activity activity;
 
-    public static HashMap<String,String> checkoutMap,checkoutMap1;
+    public static HashMap<String,String> checkoutMap;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -181,7 +181,6 @@ public class CartFragment extends Fragment {
 
         HomeActivity.updateNotificationCount(context, 0);
         customDialog = new CustomDialog(context);
-        checkoutMap1= new HashMap<>();
 
         skeleton = Skeleton.bind(dataLayout)
                 .load(R.layout.skeleton_fragment_cart)
@@ -288,13 +287,13 @@ public class CartFragment extends Fragment {
                         tamt=topPayAmount;
                         payAmount.setText(currency + "" + topPayAmount);
                         //Set Restaurant Details
-                        checkoutMap1.put("sender_name",""+response.body().getProductList().get(0).getProduct().getShop().getName());
+                      /*  checkoutMap1.put("sender_name",""+response.body().getProductList().get(0).getProduct().getShop().getName());
                         checkoutMap1.put("sender_contact",""+response.body().getProductList().get(0).getProduct().getShop().getPhone());
                         checkoutMap1.put("pickup_address",""+response.body().getProductList().get(0).getProduct().getShop().getAddress());
                         checkoutMap1.put("pickup_lat",""+response.body().getProductList().get(0).getProduct().getShop().getLatitude());
                         checkoutMap1.put("pickup_lng",""+response.body().getProductList().get(0).getProduct().getShop().getLongitude());
 
-                        restaurantName.setText(response.body().getProductList().get(0).getProduct().getShop().getName());
+                  */      restaurantName.setText(response.body().getProductList().get(0).getProduct().getShop().getName());
                         restaurantDescription.setText(response.body().getProductList().get(0).getProduct().getShop().getDescription());
                         String image_url = response.body().getProductList().get(0).getProduct().getShop().getAvatar();
                         Glide.with(context).load(image_url).placeholder(R.drawable.ic_restaurant_place_holder).dontAnimate()
@@ -448,7 +447,7 @@ public class CartFragment extends Fragment {
                     String strDate = sdf.format(c.getTime());
                     Log.d("Date","DATE : " + strDate);
                     // checkoutMap1.put("user_id",""+GlobalData.profileModel.getId());
-                    checkoutMap1.put("user_id","5dbfc1da85c87d14e5115b63");
+               /*     checkoutMap1.put("user_id","5dbfc1da85c87d14e5115b63");
                     checkoutMap1.put("order_type","PICK");
                     checkoutMap1.put("item_description",""+customNotes.getText());
                     checkoutMap1.put("vehicle_type","BIKE");
@@ -462,6 +461,7 @@ public class CartFragment extends Fragment {
                     checkoutMap1.put("delivery_datetime",""+strDate);
                     checkoutMap1.put("remarks","Test");
 
+ */
                     checkoutMap.put("user_address_id",""+GlobalData.getInstance().selectedAddress.getId());
                     checkoutMap.put("note",""+customNotes.getText());
                     if(useWalletChkBox.isChecked())
